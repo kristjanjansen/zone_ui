@@ -1,0 +1,244 @@
+<template>
+    <div>
+        <site
+            class="margin-bottom-md"
+            v-for="site in sites"
+            :site="site"
+        >
+        </site>
+    </div>
+</template>
+
+<script>
+
+    import site from '../../components/site/site.vue'
+
+    export default {
+        components: { site },
+        data: function() {
+            return {
+                sites: [
+                    {
+                        name: 'puu.ee',
+                        status: 'ok',
+                        desc: 'World',
+                        topLinks: [
+                            [
+                                {name: '/!\\ Pikendamine', prio: 'big'},
+                                {name: 'Nimeserver'},
+                                {name: 'Domeen', prio: 'small'},
+                            ],
+                            [
+                                {name: '/!\\', prio: 'big'},
+                                {name: 'E-mail'},
+                                {name: '+'}
+                            ],
+                            [
+                                {name: '/!\\', prio: 'big'},
+                                {name: 'VPS I'},
+                                {name: 'WebFTP'},
+                                {name: 'WP'},
+                                {name: 'Magento'},
+                                {name: '+'}
+                            ]
+                        ],
+                        bottomLinks:
+                            [
+                                [
+                                    [
+                                        {name: 'Domeen', prio: 'title'},
+                                    ],
+                                    [
+                                        {name: 'Pikendamine (kui vaja)', prio: 'big'},
+                                        {name: 'Pikendamine (kui ok)'},
+                                        {name: 'Kellele registreeritud'},
+                                        {name: 'Kontakt E-post'},
+                                        {name: 'Omanikuvahehtus/kolimine', prio: 'small'},
+                                        {name: '(Delegeerimine?)', prio: 'small'},
+                                        {name: '(Teisel kontol?)', prio: 'small'},
+                                    ],
+                                    [
+                                        {name: 'Sinu domeen kasutab Zone nimeservereid', prio: 'small'},
+                                        {name: 'Sinu domeen kasutab Zone epostiservereid', prio: 'small'},
+                                        {name: 'DNSSec'},
+                                        {name: 'Domain privacy'},
+                                        {name: 'SPF/DKIM'},
+                                    ],
+                                    [
+                                        {name: 'poosas.ee → puu.ee'},
+                                        {name: 'põõsas.ee → puu.ee'},
+                                        {name: 'Upsell', prio: 'small'},
+                                    ]
+                                ],
+                                [
+                                    [
+                                        {name: 'E-mail', prio: 'title'},
+                                    ],
+                                    [
+                                        {name: 'Mahupiirid (kui üle)', prio: 'big'},
+                                        {name: 'Mahupiirid (kui ok)', prio: 'small'},
+                                        {name: 'Kontosid 5/10'},
+                                        {name: '+ Lisa konto'},
+                                        {name: 'Liste 2/5', prio: 'small'},
+                                        {name: '+ Lisa list', prio: 'small'},
+                                        {name: 'Suunamisi 1/10', prio: 'small'},
+                                        {name: '+ Lisa suunamine', prio: 'small'},
+                                    ],
+                                ],
+                                [
+                                    [
+                                        {name: 'Server', prio: 'title'},
+                                    ],
+                                    [
+                                        {name: 'Staatus (kui jama)', prio: 'big'},
+                                        {name: 'Staatus (kui ok)?', prio: 'small'},
+                                        {name: 'Pakett: VPS I'},
+                                        {name: 'Upsell?', prio: 'small'},
+                                        {name: 'Maht: Kettaruum (kui üle)', prio: 'big'},
+                                        {name: 'Maht: Kettaruum (kui ok)'},
+                                        {name: 'Maht: Failide arv (kui üle)', prio: 'big'},
+                                        {name: 'Maht: Failide arv (kui ok)'},
+                                    ],
+                                    [
+                                        {name: 'puustusmaa.ee'},
+                                        {name: '/data01/virt59090...', prio: 'small'},
+                                        {name: 'HTTP/HTTPS/LE'},
+                                        {name: 'PHP 7.1'},
+                                        {name: 'Z+ Wordpress 4.6.1 (kui jama)', prio: 'big'},
+                                        {name: 'Z+ Wordpress (kui ok)'},
+                                        {name: '+ Lisa Z+'},
+                                    ],
+                                    [
+                                        {name: 'pood.puustusmaa.ee'},
+                                        {name: '/data01/virt59090...', prio: 'small'},
+                                        {name: 'HTTP/HTTPS/LE'},
+                                        {name: 'PHP 5.6'},
+                                        {name: 'Z+ Magento 2.2.2 (kui jama)', prio: 'big'},
+                                        {name: 'Z+ Magento (kui ok)'},
+                                        {name: '+ Lisa Z+'},
+                                    ],
+                                    [
+                                        {name: 'WebFTP'},
+                                        {name: 'FTP IP/hostname'},
+                                        {name: 'FTP turvanõue'},
+                                        {name: 'FTP user'},
+                                        {name: 'FTP password'},
+                                        {name: 'FTP Whitelist', prio: 'small'},
+                                        {name: 'SSH Host'},
+                                        {name: 'SSH Key'},
+                                        {name: 'SSH Whitelist', prio: 'small'},
+                                    ],
+                                    [
+                                        {name: 'phpMySqlAdmin'},
+                                        {name: 'MySql servername/ip'},
+                                        {name: 'Username'},
+                                        {name: 'Password'},
+                                        {name: 'Baase 5/10'},
+                                        {name: '+ Lisa baas'},
+                                        {name: 'Kasutajaid 2/10', prio: 'small'},
+                                        {name: '+ Lisa kasutaja', prio: 'small'},
+                                        {name: 'Whitelist', prio: 'small'},
+                                    ],
+                                    [
+                                        {name: 'Delegeerimine / kontakt'},
+                                        {name: 'Teavitused'},
+                                    ]
+                                ]
+                            ],
+                    },
+                    {
+                        name: 'poosas.ee → puu.ee',
+                        status: 'ok',
+                        desc: 'World',
+                        topLinks: [
+                            [
+                                {name: '/!\\ Pikendamine', prio: 'big'},
+                                {name: 'Nimeserver'},
+                                {name: 'Domeen', prio: 'small'},
+                            ]
+                        ],
+                        bottomLinks:
+                            [
+                                [
+                                    [
+                                        {name: 'Domeen', prio: 'title'},
+                                    ],
+                                    [
+                                        {name: 'Pikendamine (kui vaja)', prio: 'big'},
+                                        {name: 'Pikendamine (kui ok)'},
+                                        {name: 'Kellele registreeritud'},
+                                        {name: 'Kontakt E-post'},
+                                        {name: 'Omanikuvahehtus/kolimine', prio: 'small'},
+                                        {name: '(Delegeerimine?)', prio: 'small'},
+                                        {name: '(Teisel kontol?)', prio: 'small'},
+                                    ],
+                                    [
+                                        {name: 'Sinu domeen kasutab Zone nimeservereid', prio: 'small'},
+                                        {name: 'Sinu domeen kasutab Zone epostiservereid', prio: 'small'},
+                                        {name: 'DNSSec'},
+                                        {name: 'Domain privacy'},
+                                        {name: 'SPF/DKIM'},
+                                    ],
+                                    [
+                                        {name: 'poosas.ee → puu.ee'},
+                                    ]
+                                ]
+                            ],
+                    },
+                    {
+                        name: 'lill.ee',
+                        status: 'ok',
+                        desc: 'World',
+                        topLinks: [
+                            [
+                                {name: '/!\\ Pikendamine', prio: 'big'},
+                                {name: 'Nimeserver'},
+                                {name: 'Domeen', prio: 'small'},
+                                {name: '+ Lisa aliaseks'},
+                            ],
+                            [
+                                {name: '+ Lisa server', prio: 'big'},
+                            ]
+                        ],
+                        bottomLinks:
+                            [
+                                [
+                                    [
+                                        {name: 'Domeen', prio: 'title'},
+                                    ],
+                                    [
+                                        {name: 'Pikendamine (kui vaja)', prio: 'big'},
+                                        {name: 'Pikendamine (kui ok)'},
+                                        {name: 'Kellele registreeritud'},
+                                        {name: 'Kontakt E-post'},
+                                        {name: 'Omanikuvahehtus/kolimine', prio: 'small'},
+                                        {name: '(Delegeerimine?)', prio: 'small'},
+                                        {name: '(Teisel kontol?)', prio: 'small'},
+                                    ],
+                                    [
+                                        {name: 'Sinu domeen kasutab Zone nimeservereid', prio: 'small'},
+                                        {name: 'Sinu domeen kasutab Zone epostiservereid', prio: 'small'},
+                                        {name: 'DNSSec'},
+                                        {name: 'Domain privacy'},
+                                        {name: 'SPF/DKIM'},
+                                    ],
+                                    [
+                                        {name: '+ Lisa aliaseks'},
+                                    ]
+                                ],
+                                [
+                                    [
+                                        {name: 'Server', prio: 'title'},
+                                    ],
+                                    [
+                                        {name: '+ Lisa server', prio: 'big'},
+                                    ]
+                                ]
+                            ],
+                    }
+                ]
+            }
+        }
+    }
+
+</script>

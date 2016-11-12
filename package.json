@@ -1,0 +1,31 @@
+{
+  "name": "zone",
+  "private": "true",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-history-api-fallback": "^2.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgo": "^1.0.3",
+    "gulp-svgstore": "^6.0.0",
+    "html-loader": "^0.4.4",
+    "js-yaml": "^3.6.1",
+    "laravel-elixir": "^6.0.0-10",
+    "laravel-elixir-vue-2": "^0.2.0",
+    "laravel-elixir-webpack-official": "^1.0.4",
+    "lodash": "^4.16.4",
+    "postcss-font-magician": "^1.4.0",
+    "postcss-if-media": "^1.0.1",
+    "postcss-partial-import": "^2.0.0",
+    "postcss-simple-vars": "^3.0.0",
+    "vue": "^2.0.1",
+    "vue-resource": "^1.0.3",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index"
+  }
+}

@@ -1,0 +1,22 @@
+.styleguide__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: $margin-md;
+    height: 4rem;
+}
+.styleguide__title {
+    font: $font-text-xl;
+    margin-bottom: $margin-md;
+    color: $gray-dark;
+}
+.styleguide__icon {
+    width: 3rem;
+    display: flex;
+    align-items: center;
+}
+.styleguide__code {
+    color: $gray;
+    font: $font-code-md;
+    margin-left: $margin-md;
+}
+
