@@ -1,3 +1,3 @@
 ## zone_ui
 
-Zone.ee UI audit
+Zone.ee UI prototype
